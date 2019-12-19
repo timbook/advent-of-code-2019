@@ -36,27 +36,6 @@ print()
 
 # ============================================================================
 
-#  raw_data = """COM)B
-#  B)C
-#  C)D
-#  D)E
-#  E)F
-#  B)G
-#  G)H
-#  D)I
-#  E)J
-#  J)K
-#  K)L
-#  K)YOU
-#  I)SAN"""
-
-#  data = [parse_line(line) for line in raw_data.split("\n")]
-
-planets = {"COM": Node("COM", None)}
-
-for left, right in data:
-    planets[right] = Node(right, left)
-
 you_orbits = planets["YOU"].orbit
 san_orbits = planets["SAN"].orbit
 
