@@ -42,9 +42,7 @@ def register_meteors(x, y):
         x_step = (x_m - x_offset) // d
         y_step = (y_m - y_offset) // d
 
-        if any([(x + z*x_step, y + z*y_step) in meteors for z in range(1, d)]):
-            pass
-        else:
+        if not any([(x + z*x_step, y + z*y_step) in meteors for z in range(1, d)]):
             register.append((x_m, y_m))
 
     return register
